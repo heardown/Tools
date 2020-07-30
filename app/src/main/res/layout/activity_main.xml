@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="start"
+            android:text="开始" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click"
+            android:text="跳转" />
+    </LinearLayout>
+
+
+    <me.winds.demo.widget.CircularProgressView
+        android:id="@+id/mIndicator"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="6dp"
+        android:background="#5D8DE4"
+        android:paddingLeft="12dp"
+        android:paddingTop="7dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="7dp">
+
+        <me.winds.demo.CircleProgressView
+            android:id="@+id/cpv_indicator"
+            android:layout_width="135dp"
+            android:layout_height="135dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/cpv_indicator"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="健康指数：很好"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:background="#4B80E0" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_status"
+            android:layout_alignLeft="@id/layout_status"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/cpv_indicator"
+            android:lineSpacingExtra="5dp"
+            android:text="习惯保持的很好啊，你现在的状态非常好！"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

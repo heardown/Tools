@@ -1,0 +1,3 @@
+include ':crash-report'
+include ':app', ':logger', ':scheduler'
+rootProject.name = "Tools"
